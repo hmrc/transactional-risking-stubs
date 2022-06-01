@@ -1,7 +1,7 @@
 
-# transactional-risking-stubs
+# Transactional Risking Service Stubs
 
-This is a placeholder README.md for a new repository
+Will provide various stubs to be run with the [Transactional Risking Service]("https://github.com/hmrc/transactional-risking").
 
 ### License
 
