@@ -22,10 +22,11 @@ import javax.inject.{Inject, Singleton}
 import scala.concurrent.Future
 
 @Singleton()
-class MicroserviceHelloWorldController @Inject()(cc: ControllerComponents)
+class GreetingController @Inject()(cc: ControllerComponents)
     extends BackendController(cc) {
 
-  def hello(): Action[AnyContent] = Action.async { implicit request =>
-    Future.successful(Ok("Hello world"))
+  def greet(): Action[AnyContent] = Action.async {
+    // TODO Use the HRMC Http implicit readers/writer and Play JSON instead ...
+    Future.successful(Ok(s"""{"message":"hola mundo!"}""").as("application/json"))
   }
 }
